@@ -57,23 +57,40 @@ function App() {
           </div>
           {isEditing ? (
             <div className='EditgapSpace'>
-              <input type='text' value={name} onChange={(e) => setName(e.target.value)} placeholder='enter name'></input>
-              <input type='text' value={bio} onChange={(e) => setBio(e.target.value)} placeholder='enter bio'></input>
+              {/* <h3>Edit Info</h3> */}
+              <label>Full Name:</label>
+              <input type='text'  onChange={(e) => setName(e.target.value)} placeholder='Enter fullname'></input>
+              <label>Bio:</label>
+              {/* <input type='text'  onChange={(e) => setBio(e.target.value)} placeholder='Enter bio'></input> */}
+              <textarea  rows="5" cols="32" placeholder = "Enter biography"  onChange={(e) => setBio(e.target.value)}></textarea>
               <button onClick={() => setIsEditing(false)}>Submit</button>
             </div>
           ) :<div className='gapSpace'>
             <h1>{name}</h1>
             <p>{bio}</p>
-            <button onClick={() => setIsEditing(true)}>Edit</button>
+            <button onClick={() => setIsEditing(true)}>
+<svg width="16" height="12" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="13.0676" y="4.87506" width="11.6506" height="3.21396" transform="rotate(135 13.0676 4.87506)" fill="#212121"/>
+<path d="M14.2035 1.4662C14.8311 2.09377 14.8311 3.11125 14.2035 3.73881L13.6354 4.30697L11.3628 2.03436L11.9309 1.4662C12.5585 0.83864 13.576 0.83864 14.2035 1.4662Z" fill="#212121"/>
+<path d="M1.54021 13.4837L2.55674 10.8408L4.82935 13.1134L2.18637 14.1299C1.782 14.2854 1.38468 13.8881 1.54021 13.4837Z" fill="#212121"/>
+</svg> <span>Edit Profile</span>
+            </button>
           </div> }
           
           </div>
           <div className='newpost'>
-            <button onClick={() => setShowCard(!showCard)}>New Post</button>
+            <button onClick={() => setShowCard(!showCard)}>
+<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 7L13 7" stroke="#FCF5E5" stroke-width="2" stroke-linecap="round"/>
+<path d="M7 13L7 1" stroke="#FCF5E5" stroke-width="2" stroke-linecap="round"/>
+</svg><span>New Post</span>
+            </button>
             {showCard && (
-            <form onSubmit={handleAddPost}>
-           <input type="file" accept='image/*' value={newImage} onChange={(e) => setNewImage(e.target.value)} />
-            <input type="text" name="" id="" value={newTitle} placeholder='input text' onChange={(e) => setNewTitle(e.target.value)} />
+            <form onSubmit={handleAddPost} className='newpostForm'>
+              <label>Name of Restaurant:</label>
+            <input type="text" name="" id="newPostTex" value={newTitle} placeholder='input text' onChange={(e) => setNewTitle(e.target.value)} />
+            <label>Image of Restaurant:</label>
+            <input type="file" accept='image/*' value={newImage} onChange={(e) => setNewImage(e.target.value)} className='avatarimg' />
             <button type='submit'>Submit</button>
             </form>
             )}
@@ -83,7 +100,7 @@ function App() {
 <hr/>
         <div className='section-two'>
           {card.map((item, index) => (
-            <div key={index}>
+            <div key={index} className='section-two-style'>
               <img src={item.image}/>
               <div className='tag-style'>
               <p>{item.title}</p>

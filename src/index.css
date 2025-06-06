@@ -37,6 +37,7 @@ text-align: center;
 
 .mother-container{
   background-color: var(--bg-body);
+
 }
 
 .inner-section{
@@ -50,19 +51,54 @@ margin-right: 120px;
   display: flex;
   justify-content: center;
    flex-wrap: wrap;
+   margin-top: 20px;
   
 }
 
 .gapSpace{
   line-height: 40px;
+  margin-left: 10px;
 }
 
 .gapSpace button{
 margin-top: 90px;
+font-size:0.8rem;
+  color:#212121;
+  border: none;
+  background: inherit;
+  cursor: pointer;
+  text-align: left;
+  display: flex;
+  gap: 0.4rem;
 }
 
 .newpost{
-  margin-top: 170px;
+  margin-top: 160px;
+}
+
+.newpost button{
+   margin-top: 10px;
+    background-color: var(--color-dark-gray);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px;
+    display: flex;
+    gap: 8px;
+}
+
+#newPostTex{
+ align-items: end;
+}
+
+.newpostForm{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+   top: 55px; right: 50px;
+   background-color: var(--bg-body);
+   gap: 4px;
+   Padding: 10px;
 }
 
 .section-two{
@@ -74,6 +110,18 @@ margin-top: 90px;
   padding-top: 20px;
 }
 
+.section-two-style{
+  flex: 0 0 calc(30.33% - 10px); /* 3 items per row (minus gap) */
+  box-sizing: border-box;
+  padding: 20px;
+  text-align: center;
+}
+
+.avatarimg{
+   max-width: 200px;
+    max-height: 200px;
+}
+
 .tag-style{
   display: flex;
   justify-content: space-between;
@@ -83,7 +131,18 @@ margin-top: 90px;
 .EditgapSpace{
   display: flex;
   flex-direction: column;
-  /* flex-wrap: wrap; */
+  align-items: center;
+  justify-content: center;
+  margin-left: 30px;
+}
+
+input{
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+  max-width: 100px;
+  width: 100%;
+  margin: 5px 0;
 }
 
 hr{
