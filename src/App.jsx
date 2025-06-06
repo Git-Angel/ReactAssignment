@@ -43,7 +43,8 @@ function App() {
       
     }
   }
-  
+
+  // const imageUrl = URL.createObjectURL(newImage)
 
   return (
     <>
