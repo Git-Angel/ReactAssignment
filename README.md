@@ -3,7 +3,7 @@
 A web project inspired by Instagram starting with HTML and CSS and gradually evolved to javascript to a fully to a React app.
 
 ## Live Site
-[View react-assignment](https://insta-spots.vercel.app/)
+[View react-assignment](https://react-assignment-rho-five.vercel.app/)
 
 ---
 
