@@ -74,6 +74,18 @@ margin-top: 90px;
   padding-top: 20px;
 }
 
+.tag-style{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.EditgapSpace{
+  display: flex;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+}
+
 hr{
  margin-left: 120px;
 margin-right: 120px;

@@ -1,4 +1,4 @@
-# Insta-assignment
+# React-assignment
 
 A web project inspired by Instagram starting with HTML and CSS and gradually evolved to javascript to a fully to a React app.
 
